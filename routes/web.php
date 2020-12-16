@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HotelController;
+use App\Http\Controllers\HabitacionesController;
+use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\FacturacionController;
+use App\Http\Controllers\ReservasController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -12,49 +18,31 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//seccion hotel
+Route::get('/', [HotelController::class, 'getindex']);
 
-Route::get('/', function () {
-    //ruta que dirije pantalla principal
-    return view('main');
-});
+Route::get('hotel/historia', [HotelController::class, 'showHistoria']);
 
+Route::get('hotel/mision', [HotelController::class, 'showMision']);
 
-Route::get('hotel/historia', function () {
-    
-    return view('hotel.historia');
-});
+Route::get('hotel/ubicacion', [HotelController::class, 'showUbicacion']);
 
-
-Route::get('hotel/mision-vision', function () {
-    
-    return view('hotel.mision-vision');
-});
+Route::get('contactos', [HotelController::class, 'showContactos']);
 
 
-Route::get('hotel/ubicacion', function () {
-    
-    return view('hotel.ubicacion');
-});
+//seccion Habitaciones
 
-Route::get('servicios/habitaciones', function () {
-    
-    return view('servicios.habitaciones');
-});
+Route::get('servicios/habitaciones', [HabitacionesController::class, 'showHabitaciones']);
 
+Route::get('servicios/eventos/{id}', [HabitacionesController::class, 'getEventos']);
+//seccion clientes
 
-Route::get('servicios/eventos/{id}', function ($id) {
-    
-    
-    return  "El Evento Nº: {$id}";
-});
+Route::get('clientes/visualizar/cliente', [ClientesController::class, 'showClientes']);
 
-Route::get('reservas', function () {
-    
-    return view('reservas');
-});
+//seccion facturacion
 
-Route::get('contactos', function () {
-    
-    return view('contactos');
-});
+Route::get('facturacion/factura', [FacturacionController::class, 'getFactura']);
 
+//seccion reservas
+
+Route::get('reservas', [ReservasController::class, 'getReservas']);

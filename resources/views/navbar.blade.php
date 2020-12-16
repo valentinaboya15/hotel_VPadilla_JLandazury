@@ -16,7 +16,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{{url('/hotel/historia')}}">Historia</a>
-          <a class="dropdown-item" href="{{url('/hotel/mision-vision')}}">Mision y Vision</a>
+          <a class="dropdown-item" href="{{url('/hotel/mision')}}">Mision y Vision</a>
           <a class="dropdown-item" href="{{url('/hotel/ubicacion')}}">Ubicacion</a>
         </div>
       </li>
@@ -28,8 +28,18 @@
           
         </div>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Clientes </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{url('/clientes/visualizar/cliente')}}">Visualizar</a>
+          
+        </div>
+      </li>
       <li class="nav-item">
         <a class="nav-link " href="{{ url('/reservas')}}" tabindex="-1" aria-disabled="true">Reservas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="{{ url('/facturacion/factura')}}" tabindex="-1" aria-disabled="true">Facturacion</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ url('/contactos')}}" tabindex="-1" role="button" aria-disabled="true">Contactos</a>

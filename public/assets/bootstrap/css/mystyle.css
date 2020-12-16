@@ -1,39 +1,16 @@
-*{
-    margin: 0;
-    padding: 0;
-  }
-  header{
-    font-family: Helvetica;
-    width: 480px;
-    margin: 0 auto;
-  }
-  ul{
-    list-style: none;
-  }
-  #menu li>a{
+.main{
+  position:absolute;
+  background: url(../img/j.jpg);
+  background-size: cover;
+  min-height: 601px;
+  min-width: 80vw;
+}
 
-    background-color: grey;
-    color: white;
-    padding: 10px;
-    display: block;
-    text-decoration: none;
-    max-width: 500px;
-  }
-  #menu li>a:hover{
-    color: #000;
-    background-color: #eaeaea;
-  }
-  #menu>li{
-    
-    float: left;
-    text-align:center
-  }
-  #menu>li>ul{
-    display: none;
-  }
-  #menu>li:hover>ul {
-    display:block;
-  }
+.background-overlay{
+  background: rgba(blue);
+  width: 80vmax;
+  height: 601px;
+}
 h1{
     font-family: 'Bangers', cursive;
 }

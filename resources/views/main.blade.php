@@ -27,9 +27,9 @@
         <div class="container">
         
             @yield('contenido')
-            <div class="container-lg"><img src="{{url('/assets/imagenes/3.jpg')}}"></div>
             
-            <p>Bienvenido al Hotel Rivera</p>
+          
+            
         </div>
         
          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
