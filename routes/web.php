@@ -45,4 +45,4 @@ Route::get('facturacion/factura', [FacturacionController::class, 'getFactura']);
 
 //seccion reservas
 
-Route::get('reservas', [ReservasController::class, 'getReservas']);
+Route::get('reservas', [ReservasController::class, 'getReservas']);  
