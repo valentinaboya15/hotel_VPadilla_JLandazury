@@ -14,13 +14,14 @@ class CreateHabitacionTable extends Migration
     public function up()
     {
         Schema::create('habitacion', function (Blueprint $table) {
-            $table->bigIncrements('Numero', 11);
+            $table->bigIncrements('Numero');
+           // $table->primary('Numero');
             $table->string('Descripcion');
-            $table->integer('Num camas', 11);
+            $table->integer('Num_camas');
             $table->string('Foto', 45);
             $table->unsignedBigInteger('precio_id');
 
-            $table->foreign('precio_id')->references('id')->on('precio')->onDelete('cascade');
+            $table->foreign('precio_id')->references('id')->on('precios')->onDelete('cascade');
 
             $table->timestamps();
         });

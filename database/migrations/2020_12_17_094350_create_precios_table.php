@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePrecioTable extends Migration
+class CreatePreciosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreatePrecioTable extends Migration
      */
     public function up()
     {
-        Schema::create('precio', function (Blueprint $table) {
-            
+        Schema::create('precios', function (Blueprint $table) {
             $table->id();
             $table->string('Tipo',10);
-            $table->integer('precio',11);// dice que tengo dos llaves primarias
-           
+            $table->integer('precio');
+            $table->timestamps();
         });
     }
 
@@ -29,6 +28,6 @@ class CreatePrecioTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('precio');
+        Schema::dropIfExists('precios');
     }
 }
