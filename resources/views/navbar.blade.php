@@ -35,6 +35,14 @@
           
         </div>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Resultado </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{url('/resultado/consulta')}}">Consulta1</a>
+          <a class="dropdown-item" href="{{url('/resultado/consulta2')}}">Consulta2</a>
+          
+        </div>
+      </li>
       <li class="nav-item">
         <a class="nav-link " href="{{ url('/reservas')}}" tabindex="-1" aria-disabled="true">Reservas</a>
       </li>
@@ -44,6 +52,7 @@
       <li class="nav-item">
         <a class="nav-link" href="{{ url('/contactos')}}" tabindex="-1" role="button" aria-disabled="true">Contactos</a>
       </li>
+      
     </ul>
    
   </div>

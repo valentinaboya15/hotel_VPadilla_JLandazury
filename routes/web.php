@@ -29,6 +29,9 @@ Route::get('hotel/ubicacion', [HotelController::class, 'showUbicacion']);
 
 Route::get('contactos', [HotelController::class, 'showContactos']);
 
+Route::get('resultado/consulta', [HotelController::class, 'getConsulta']);
+
+Route::get('resultado/consulta2', [HotelController::class, 'getConsulta2']);
 
 //seccion Habitaciones
 
@@ -46,3 +49,5 @@ Route::get('facturacion/factura', [FacturacionController::class, 'getFactura']);
 //seccion reservas
 
 Route::get('reservas', [ReservasController::class, 'getReservas']);  
+
+Route::get('facturacion/factura', [FacturacionController::class, 'getFactura']);

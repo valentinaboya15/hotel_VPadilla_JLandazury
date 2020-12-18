@@ -15,15 +15,13 @@ class CreateHabitacionTable extends Migration
     {
         Schema::create('habitacion', function (Blueprint $table) {
             $table->bigIncrements('Numero');
-           // $table->primary('Numero');
-            $table->string('Descripcion');
-            $table->integer('Num_camas');
-            $table->string('Foto', 45);
-            $table->unsignedBigInteger('precio_id');
-
-            $table->foreign('precio_id')->references('id')->on('precios')->onDelete('cascade');
-
-            $table->timestamps();
+             $table->string('Descripcion');
+             $table->integer('Num_camas');
+             $table->string('Foto', 45);
+             $table->unsignedBigInteger('precio_id');
+             $table->foreign('precio_id')->references('id')->on('precios')->onDelete('cascade');
+ 
+             $table->timestamps();
         });
     }
 
